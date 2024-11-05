@@ -1,0 +1,76 @@
+/* Estilos generales para el contenedor de chat */
+#chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Altura mínima para centrar verticalmente */
+  background-color: #ffffff; /* Color de fondo suave */
+  padding: 20px;
+}
+
+#chat > div {
+  margin-bottom: 20px; 
+}
+
+
+input[type="text"] {
+  padding: 10px;
+  width: 250px; 
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  margin-right: 10px; 
+}
+
+/* Estilos para el botón */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Cambiar color del botón al pasar el mouse */
+button:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilos para la lista de mensajes */
+#messages {
+  list-style-type: none; /* Quitar viñetas de la lista */
+  padding: 0; /* Quitar padding */
+  max-width: 400px; /* Ancho máximo de la lista */
+  margin: 0; /* Quitar márgenes */
+  background-color: rgb(255, 255, 255); /* Fondo blanco para la lista */
+  border: 1px solid #ccc; /* Borde de la lista */
+  border-radius: 5px; /* Bordes redondeados */
+  overflow-y: auto; /* Scroll vertical si el contenido es grande */
+  max-height: 300px; /* Altura máxima de la lista */
+}
+
+/* Estilos para los elementos de la lista */
+#messages li {
+  padding: 10px; /* Espaciado interno en los elementos de la lista */
+  border-bottom: 1px solid #ffffff; /* Línea entre mensajes */
+  background-color: green;
+}
+
+/* Eliminar borde inferior del último elemento */
+#messages li:last-child {
+  border-bottom: none; /* Quitar borde del último mensaje */
+}
+
+/* Estilos para el formulario */
+#form {
+  display: flex; /* Usar flexbox para alinear el input y el botón */
+  align-items: center; /* Centrar verticalmente el input y el botón */
+  margin-top: 10px; /* Espacio arriba del formulario */
+}
+
+/* Estilos para el input del mensaje */
+#form input[type="text"] {
+  flex: 1; /* Hacer que el input ocupe el espacio restante */
+  margin-right: 10px; /* Espacio entre el input y el botón */
+}

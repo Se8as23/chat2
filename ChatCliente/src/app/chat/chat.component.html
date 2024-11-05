@@ -1,0 +1,28 @@
+<section id="chat">
+  <div *ngIf="!isUsernameSet">
+    <input
+      type="text"
+      placeholder="Ingrese su nombre"
+      [(ngModel)]="username"
+      (keydown.enter)="setUsername()"
+    />
+    <button (click)="setUsername()">Establecer nombre</button>
+  </div>
+  <div *ngIf="isUsernameSet">
+    <ul id="messages">
+      <li *ngFor="let m of messages">{{ m }}</li>
+    </ul>
+    <form id="form" (submit)="sendMessage()">
+      <input
+        type="text"
+        name="message"
+        id="input"
+        placeholder="Escribir un mensaje"
+        autocomplete="off"
+        [(ngModel)]="message"
+        (keydown.enter)="sendMessage()"
+      />
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
